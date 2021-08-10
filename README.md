@@ -76,9 +76,9 @@ Correct length: 1204 (91.07%)
 Too_long (> 43): 98 (7.41%) - Average length: 8.5
 Too_short (< 6): 20 (1.51%) - Average length: 4.4
 ```
-where the first percentage (e.g. `0.91%`) represents the **Conformity Length** metric.
+where the first percentage (e.g. `91.07%`) represents the **Conformity Length** metric.
 
-### Reading Speed
+### Reading Speed and Subtitle Delay
 The reading speed (rs) metric can be computed, for each type of visualization mode, as follows:
 - **word-for-word**: ```python reading_speed_scrollingwords.py ${K_VALUE} ${INSTANCES_PATH}```
 - **blocks**: ```python reading_speed_blocks.py ${K_VALUE} ${INSTANCES_PATH}```
