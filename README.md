@@ -9,6 +9,7 @@ Subtitling: from Delay to Display](https://arxiv.org/pdf/2107.08807.pdf)
 - sacreBLEU
 - Average Lagging
 - Length Conformity
+- Subtitle Delay
 - Reading Speed ✨new✨
 
 ## Setup
@@ -61,21 +62,21 @@ SimulEval `scores.log` file will be similar to:
     }
 }
 ```
-`BLEU` represents the **sacreBLEU** score, and `AL` represents the **Average Lagging**.
+`BLEU` represents the **sacreBLEU** score, and `AL` represents the **Average Lagging**. 
 
 ### Length Conformity
 The length conformity can be computed by running:
 ```sh
-python reading_speed_scrollingwords.py ${K_VALUE} ${INSTANCES_PATH}
+python length.py ${K_VALUE} ${INSTANCES_PATH}
 ```
 The output prompted will be similar to:
 ```
 - CONFORMITY -
-Correct length: 1204 (0.9107413010590015%)
-Too_long (> 43): 98 (0.07413010590015129%) - Average length: 8.5
-Too_short (< 6): 20 (0.015128593040847202%) - Average length: 4.4
+Correct length: 1204 (91.07%)
+Too_long (> 43): 98 (7.41%) - Average length: 8.5
+Too_short (< 6): 20 (1.51%) - Average length: 4.4
 ```
-where the first percentage (e.g. `0.9107413010590015%`) represents the **Conformity Length** metric.
+where the first percentage (e.g. `0.91%`) represents the **Conformity Length** metric.
 
 ### Reading Speed
 The reading speed (rs) metric can be computed, for each type of visualization mode, as follows:
@@ -86,11 +87,15 @@ where `K_VALUE` is the wait-k step value, and `INSTANCES_PATH` is the path where
 The output prompted will be similar to:
 ```
 - READING SPEED -
-Duration (mean and stdev): 5056.591594384641 +/- 4307.528791719213
-Reading_speed (mean and stdev): 53.52209742804699 +/- 9.905798307633066
-Percentage of subtitles respecting reading speed (rs < 21.01s): 0.6122448979591837
+Duration (mean and stdev): 2375.9 +/- 3060.96
+Reading speed (mean and stdev): 53.35 +/- 9.91
+Percentage of subtitles respecting reading speed (rs < 21.01s): 38.88%
+
+- DELAY -
+Subtitle delay: 4690.2 +/- 3380.11
 ```
-where the `Reading_speed` represents the **Reading Speed (rs)** metric.
+where the `Reading speed` represents the **Reading Speed (rs)** metric and the `Subtitle delay` represents the **Delay**.
+
 
 ## Citation
 Please cite as:
