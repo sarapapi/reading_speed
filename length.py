@@ -33,7 +33,7 @@ for i in data:
         if sub != '':
             total_subs += 1
             length = len(list(sub.lstrip()))
-            if length > 43:
+            if length > 42:
                 too_long.append(length - 42)
             elif length < 6:
                 too_short.append(length)
