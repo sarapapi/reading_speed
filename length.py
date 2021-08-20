@@ -35,8 +35,6 @@ for i in data:
             length = len(list(sub.lstrip()))
             if length > 42:
                 too_long.append(length - 42)
-            elif length < 6:
-                too_short.append(length)
             else:
                 correct += 1
 
@@ -45,6 +43,3 @@ print('Correct length: ' + str(correct) + ' (' + str(round(correct/total_subs*10
 print('Too_long (> 42): ' + str(len(too_long)) + ' (' 
       + str(round(len(too_long)/total_subs*100, 2)) +
       '%) - Average length: ' + str(round(sum(too_long) / len(too_long), 2)))
-print('Too_short (< 6): ' + str(len(too_short)) + ' ('
-      + str(round(len(too_short)/total_subs*100, 2)) +
-      '%) - Average length: ' + str(round(sum(too_short) / len(too_short), 2)))
