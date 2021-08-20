@@ -74,7 +74,6 @@ The output prompted will be similar to:
 - CONFORMITY -
 Correct length: 1204 (91.07%)
 Too_long (> 42): 98 (7.41%) - Average length: 8.5
-Too_short (< 6): 20 (1.51%) - Average length: 4.4
 ```
 where the first percentage (e.g. `91.07%`) represents the **Conformity Length** metric.
 
