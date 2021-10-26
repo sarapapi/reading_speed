@@ -67,7 +67,7 @@ SimulEval `scores.log` file will be similar to:
 ### Length Conformity
 The length conformity can be computed by running:
 ```sh
-python length.py ${K_VALUE} ${INSTANCES_PATH}
+python length.py ${INSTANCES_PATH}
 ```
 The output prompted will be similar to:
 ```
